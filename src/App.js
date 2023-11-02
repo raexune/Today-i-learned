@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import "./style.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className="header">
+        <div className="logo">
+          <img src="logo.png" alt="TIL Logo" height="68" width="68"></img>
+          <h1>Today I Learned</h1>
+        </div>
+        <button className="btn btn-large btn-share">Share a fact</button>
       </header>
-    </div>
+
+      <NewFactForm />
+
+      <main className="main">
+        <CategoryFilter />
+        <FactList />
+      </main>
+    </>
   );
+}
+
+function NewFactForm() {
+  return (
+    <form className="fact-form">
+      <input type="text" id="fact" placeholder="Share a fact..."></input>
+      <span>200</span>
+      <input type="text" id="source" placeholder="Source..."></input>
+      <select name="" id="category">
+        <option value="">Choose Category:</option>
+        <option value="technology">Technoloy</option>
+        <option value="science">Science</option>
+        <option value="finance">Finance</option>
+      </select>
+      <button className="btn btn-large btn-post">Post</button>
+    </form>
+  );
+}
+
+function CategoryFilter() {
+  return <aside>Category filter</aside>;
+}
+
+function FactList() {
+  return <section>Fact List</section>;
 }
 
 export default App;

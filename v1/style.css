@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #292524;
+    color: #fafaf9;
+    font-family: "Sono", sans-serif;
+    padding: 48px 64px;
+}
+
+.container{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.header{
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 16px;
+}
+
+.logo img{
+    width: 68px;
+    height: 68px;
+}
+
+h1{
+    font-size: 42px;
+    text-transform: uppercase;
+    font-family: "Coiny", sans-serif;
+    line-height: 1;
+    margin-top: 6px;
+}
+
+main{
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 48px;
+}
+
+@media (max-width: 900px){
+    main{
+        grid-template-columns: 1fr;
+    }
+}
+
+.fact{
+    font-size: 20px;
+    line-height: 1.4;
+    background-color: #44403c;
+    margin-bottom: 16px;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    letter-spacing: 3px;
+    border-radius: 16px;
+}
+
+@media (max-width: 1200px){
+    .fact{
+        flex-direction: column;
+        gap: 12px;
+    }
+}
+
+.tag{
+    text-transform: uppercase;
+    font-size: 14px;
+    font-family: "Coiny", sans-serif;
+    padding-top: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 100px;
+}
+
+.reactions{
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+ul{
+    list-style: none;
+}
+
+.source:link,
+.source:visited{
+    color: #a8a29e;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.source:hover,
+.source:active{
+    color: #3b82f6;
+}
+
+.btn{
+    border: none;
+    font-family: "Coiny", sans-serif;
+    color: inherit;
+    line-height: 1;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 16px 0 13px;
+    border-radius: 100px;
+    background: linear-gradient(135deg, #3b82f6, #ef4444, #16a34a, #eab308);
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale(110%) rotate(-2deg);
+}
+
+.btn-large{
+    font-size: 20px;
+    padding: 20px 32px 17px;
+}
+
+.btn-share{
+    width: 250px;
+}
+
+.btn-all{
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.btn-category{
+    background: none;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.btn-technology{
+    background-color: #3b82f6;
+}
+
+.btn-science{
+    background-color: #16a34a;
+}
+
+.btn-vote{
+    border: none;
+    border-radius: 100px;
+    width: 80px;
+    color: inherit;
+    background-color: #78716c;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 18px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
+.btn-vote:hover{
+    background-color: #292524;
+}
+
+.fact-form{
+    background-color: #44403c;
+    margin-bottom: 40px;
+    padding: 16px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 16px;
+}
+
+.fact-form input,
+.fact-form select{
+    width: 220px;
+    background-color: #78716c;
+    border: none;
+    border-radius: 100px;
+    padding: 16px;
+    font-size: 18px;
+    color: inherit;
+}
+
+.fact-form input:focus,
+.fact-form select:focus{
+    outline: none;
+}
+.fact-form input::placeholder{
+    color: #a8a29e;
+}
+
+.fact-form:first-child{
+    flex-grow: 1;
+}
+
+.fact-form span{
+    font-weight: 600;
+    font-size: 18px;
+    margin-right: 18px;
+}
+
+.hidden{
+    display: none;
+}
+
+@media (max-width: 1000px){
+    body{
+        padding: 32px 48px;
+    }
+    .fact-form{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .fact-form input,
+    .fact-form select{
+        width: auto;
+}
+}
+
+
